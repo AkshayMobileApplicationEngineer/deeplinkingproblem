@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invite Link</title>
+</head>
+<body>
+  <h1>Invite Link</h1>
+  <p>Code: <span id="invite-code"></span></p>
+  <button onclick="handleInvite()">Join</button>
+  <script>
+    const userId = 123;
+    const randomString = Math.random().toString(36).substr(2, 5);
+    const timestamp = Date.now();
+    const inviteCode = `${userId}_${randomString}_${timestamp}`;
+    document.getElementById('invite-code').innerText = inviteCode;
+
+    function handleInvite() {
+      try {
+        
+        window.location.href = '/success';
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  </script>
+</body>
+</html>
+ <!-- https://deeplinkingproblem.vercel.app/invite?code=<invite_code></invite_code> -->
