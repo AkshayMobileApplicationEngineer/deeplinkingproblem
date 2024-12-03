@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Linking Example</title>
+    <title>Deep Linking Example with Play Button</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,11 +15,23 @@
         .link {
             margin: 10px 0;
         }
+        #playButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #playButton:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Deep Linking Example</h1>
+    <h1>Deep Linking Example with Play Button</h1>
     <p>Click on the links below to navigate directly to specific sections of this page.</p>
 
     <div class="link">
@@ -31,7 +43,7 @@
     <div class="link">
         <a href="#section3">Go to Section 3</a>
     </div>
-
+    
     <hr>
 
     <h2 id="section1">Section 1</h2>
@@ -42,6 +54,22 @@
 
     <h2 id="section3">Section 3</h2>
     <p>This is the content of section 3. Feel free to modify this content as needed.</p>
+
+    <!-- Play Button and Audio -->
+    <div>
+        <button id="playButton">Go to Video Page</button>
+    </div>
+
+    <script>
+        // Get reference to the button
+        const playButton = document.getElementById('playButton');
+
+        // Add event listener to the button
+        playButton.addEventListener('click', function() {
+            // Redirect to the video.html page
+            window.location.href = 'video.html';  // Change 'video.html' to your actual video page URL
+        });
+    </script>
 
 </body>
 </html>
